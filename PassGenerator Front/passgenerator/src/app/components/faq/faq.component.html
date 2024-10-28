@@ -1,0 +1,115 @@
+<div class="container-fluid flex justify-center bg-slate-700 h-screen">
+    <div class="w-[40%] max-md:w-[60%] max-2xl:w-[50%] row justify-content-md-center">
+      <h2
+        class="m-5 font-orbitron text-center text-5xl font-bold bg-gradient-to-t cursor-default from-orange-500 to-slate-900 text-transparent bg-clip-text"
+      >
+        F.A.Q.
+      </h2>
+      
+    <div class="my-20" id="accordion-collapse" data-accordion="collapse">
+      <h2 id="accordion-collapse-heading-0">
+        <button type="button" (click)="toggleAccordion(0)" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+          <span class="text-xl font-bold">¿Es seguro usar PassGenerator?
+          </span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </button>
+      </h2>
+      <div *ngIf="accordions[0]" [@accordion-animation] id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
+        <div class="space-y-2 p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-b-lg shadow-sm shadow-white">
+          <p class="text-gray-500 dark:text-gray-400"><b>¡Claro que sí!</b> PassGenerator genera contraseñas compuestas por números, letras y símbolos. Los caracteres obtenidos con este generador de contraseñas automático son totalmente aleatorios y no se transmiten por Internet, así se obtiene la contraseña más segura mediante el proceso de generación de contraseñas.</p>
+        </div>
+      </div>
+        <h2 id="accordion-collapse-heading-1">
+          <button type="button" (click)="toggleAccordion(1)" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+            <span class="text-xl font-bold">¿Por qué debería usar un generador de contraseñas?
+            </span>
+            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+            </svg>
+          </button>
+        </h2>
+        <div *ngIf="accordions[1]" [@accordion-animation] id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
+          <div class="space-y-2 p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-b-lg shadow-sm shadow-white">
+            <p class="text-gray-500 dark:text-gray-400">Usar un generador de contraseñas es crucial para proteger su información personal en línea.</p>
+            <p class="text-gray-500 dark:text-gray-400">Los generadores de contraseñas crean claves únicas y complejas que son difíciles de adivinar o descifrar por parte de los ciberdelincuentes.</p>
+            <p class="text-gray-500 dark:text-gray-400">A diferencia de las contraseñas simples y comunes, las generadas incluyen una combinación de letras mayúsculas y minúsculas, números y caracteres especiales, lo que incrementa significativamente la seguridad de sus cuentas.</p>
+            <p class="text-gray-500 dark:text-gray-400">Además, un gestor de contraseñas le ayuda a almacenar y organizar sus contraseñas de manera segura, evitando la necesidad de recordarlas todas y reduciendo el riesgo de reutilizar la misma contraseña en diferentes sitios web, lo cual es una práctica común que aumenta la vulnerabilidad a ataques.</p>
+            <p class="text-gray-500 dark:text-gray-400">Al utilizar <b>PassGenerator</b>, puede navegar por Internet con mayor confianza y tranquilidad.</p>
+          </div>
+        </div>
+        <h2 id="accordion-collapse-heading-2">
+          <button type="button" (click)="toggleAccordion(2)" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+            <span class="text-xl font-bold">¿Necesito una contraseña exclusiva para cada cuenta?</span>
+            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+            </svg>
+          </button>
+        </h2>
+        <div *ngIf="accordions[2]" [@accordion-animation] id="accordion-collapse-body-2" aria-labelledby="accordion-collapse-heading-2">
+          <div class="space-y-2 p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-b-lg shadow-sm shadow-white">
+            <p class="text-gray-500 dark:text-gray-400"><b>Sí</b>, tener una contraseña exclusiva para cada cuenta es esencial para mantener su seguridad en línea.</p>
+            <p class="text-gray-500 dark:text-gray-400">Utilizar la misma contraseña para múltiples cuentas aumenta el riesgo de sufrir un ataque masivo si un ciberdelincuente logra descifrarla. En caso de que una de sus cuentas sea comprometida, todas las demás que compartan esa contraseña estarán en peligro.</p>
+            <p class="text-gray-500 dark:text-gray-400">Al crear contraseñas únicas para cada cuenta, limita el daño potencial de una violación de seguridad y protege su información personal.</p>
+            <p class="text-gray-500 dark:text-gray-400">Un gestor de contraseñas puede facilitarle la creación y el almacenamiento de contraseñas exclusivas, permitiéndole mantener la seguridad sin necesidad de memorizar todas las claves diferentes.</p>
+            
+          </div>
+        </div>
+        <h2 id="accordion-collapse-heading-3">
+          <button type="button" (click)="toggleAccordion(3)" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+            <span class="text-xl font-bold">¿Cuales son los requisitos para que una contraseña sea segura?</span>
+            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+            </svg>
+          </button>
+        </h2>
+        <div *ngIf="accordions[3]" [@accordion-animation] id="accordion-collapse-body-3" aria-labelledby="accordion-collapse-heading-3">
+          <div class="space-y-2 p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-b-lg shadow-sm shadow-white">
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Para asegurar que una contraseña sea segura, debe cumplir con los siguientes requisitos:</p>
+            <ul class="space-y-4 list-disc mx-4">
+              <li class="text-gray-500 dark:text-gray-400"><b>Longitud:</b> Una buena práctica es que la contraseña tenga al menos 12 caracteres.</li>
+              <li class="text-gray-500 dark:text-gray-400"><b>Diversidad de Caracteres:</b> Debe incluir una mezcla de letras mayúsculas, minúsculas, números y símbolos para aumentar su complejidad.</li>
+              <li class="text-gray-500 dark:text-gray-400"><b>Evitar Información Personal:</b> No utilice información fácilmente accesible o predecible, como nombres, cumpleaños o números de teléfono.</li>
+              <li class="text-gray-500 dark:text-gray-400"><b>No Usar Palabras Comunes:</b> Evite palabras del diccionario o secuencias de teclado comunes, ya que son susceptibles a ataques de diccionario.</li>
+              <li class="text-gray-500 dark:text-gray-400"><b>Única para Cada Cuenta:</b> Nunca reutilice contraseñas entre cuentas diferentes.</li>
+              <li class="text-gray-500 dark:text-gray-400"><b>Actualización Regular:</b> Cambie sus contraseñas periódicamente y siempre que sospeche que una pueda haber sido comprometida.</li>
+            </ul>
+          </div>
+        </div>
+        <h2 id="accordion-collapse-heading-4">
+          <button type="button" (click)="toggleAccordion(4)" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+            <span class="text-xl font-bold">¿Cómo puedo generar mi contraseña aleatoria?</span>
+            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+            </svg>
+          </button>
+        </h2>
+        <div *ngIf="accordions[4]" [@accordion-animation] id="accordion-collapse-body-3" aria-labelledby="accordion-collapse-heading-3">
+          <div class="space-y-2 p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-b-lg shadow-sm shadow-white">
+            <p class="mb-2 text-gray-500 dark:text-gray-400"><b>¡Es muy facil! Tan solo debe seguir estos pasos:</b></p>
+            <ul class="space-y-4 list-disc mx-4">
+              <li class="text-gray-500 dark:text-gray-400"><b>Establecer la longitud:</b> Seleccione la longitud final de la contraseña mediante el control deslizante o los botones <b>-</b> o <b>+</b>.</li>
+              <li class="text-gray-500 dark:text-gray-400"><b>Seleccionar tipos de caracteres:</b> Marque los tipos de caracteres que desea que se incluyan en la contraseña.</li>
+              <li class="text-gray-500 dark:text-gray-400"><b>Exclusiones (Opcional):</b> Escriba en el cuadro de texto los caracteres que <b>NO</b> desea incluir en su contraseña.</li>
+              <li class="text-gray-500 dark:text-gray-400"><b>Generar contraseña:</b> Pulse en el botón <b>Generar contraseña</b>. Debajo del botón aparecerá la nueva contraseña generada. </li>
+            </ul>
+          </div>
+        </div>
+        <h2 id="accordion-collapse-heading-5">
+          <button type="button" (click)="toggleAccordion(5)" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+            <span class="text-xl font-bold">¿Cómo puedo saber si la contraseña generada es segura?</span>
+            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+            </svg>
+          </button>
+        </h2>
+        <div *ngIf="accordions[5]" [@accordion-animation] id="accordion-collapse-body-3" aria-labelledby="accordion-collapse-heading-3">
+          <div class="space-y-2 p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 rounded-b-lg shadow-sm shadow-white">
+            <p class="mb-2 text-gray-500 dark:text-gray-400"><b>No se preocupe por la seguridad de la nueva contraseña.</b></p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Cada vez que se genere una nueva contraseña, <b>PassGenerator</b> mostrará una indicación debajo de la misma dependiendo de si cumple o no los requisitos mínimos para una contraseña segura.</p>
+          </div>
+        </div>
+    </div>
+</div>
+  
