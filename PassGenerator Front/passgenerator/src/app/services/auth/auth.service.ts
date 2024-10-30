@@ -13,14 +13,13 @@ export class AuthService {
   constructor(private http:HttpClient, private router:Router) { }
 
   private apiUrl = `${environment.API_URL}/auth`
-  private headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   login(mail: string, password: string): Observable<any>{
-    return this.http.post(`${this.apiUrl}/login`, { mail, password }, {headers: this.headers});
+    return this.http.post(`${this.apiUrl}/login`, { mail, password });
   }
 
   register(user:User): Observable<any>{
-    return this.http.post(`${this.apiUrl}/register`, user, {headers: this.headers});
+    return this.http.post(`${this.apiUrl}/register`, user);
   }
 
   isLoggedIn(): boolean{

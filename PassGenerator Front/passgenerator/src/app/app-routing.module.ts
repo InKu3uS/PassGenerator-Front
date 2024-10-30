@@ -12,7 +12,7 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  //{ path: '**', redirectTo: 'home' }, // For any unmatched routes, redirect to home page
+  { path: '**', redirectTo: 'home' },
   { path: 'home', component: HomeComponent},
   { path: 'passwords', component: PasswordsComponent, canActivate: [authGuard]},
   { path: 'profile', component: MyProfileComponent, canActivate: [authGuard]},

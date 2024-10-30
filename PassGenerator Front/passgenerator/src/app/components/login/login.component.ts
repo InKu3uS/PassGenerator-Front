@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('tkActUs', session.token);
         const decodedToken = helper.decodeToken(session.token);
         localStorage.setItem('usLg', decodedToken.sub);
-        this.route.navigate(['/home']).then(()=> {location.reload()});
+        this.route.navigate(['']).then(()=> {location.reload()});
       },
       error: (error) => {
         if(error.status === 404){
@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
 
   redirectIfLoggedIn() {
     if (this.service.isLoggedIn()) {
-      this.route.navigate(['/home']);
+      this.route.navigate(['']);
     }
   }
 }
