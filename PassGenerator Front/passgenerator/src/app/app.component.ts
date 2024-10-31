@@ -16,8 +16,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  //TODO: Tests Springboot.
-  //TODO: Tests Angular.
   //TODO: Redireccionar en mi perfil si no se encuentra el usuario.
   //TODO: Terminar tests
 }
